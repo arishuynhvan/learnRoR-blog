@@ -1,0 +1,6 @@
+<h1>Editing article</h1>
+<!--The method: :patch option tells Rails that we want this form to be submitted via the PATCH HTTP method which is the HTTP method you're expected to use to update resources according to the REST protocol.
+
+The first parameter of form_for can be an object, say, @article which would cause the helper to fill in the form with the fields of the object.-->
+<%= render 'form' %>
+<%= link_to 'Back', articles_path %>

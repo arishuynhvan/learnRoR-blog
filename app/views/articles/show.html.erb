@@ -1,0 +1,21 @@
+<p>
+  <strong>Title:</strong>
+  <%= @article.title %>
+</p>
+ 
+<p>
+  <strong>Text:</strong>
+  <%= @article.text %>
+</p>
+<!--get the info from comments_controller and render after redirected
+This cannot be replaced with 'comments/comment' bc there should be many comments, but why??? Where is this actually checked???-->
+<h2>Comments</h2>
+<%= render @article.comments %> 
+
+<!-- automatic formation of variables vs relative path to file?
+This seems to allow bc the relation ship was not defined?-->
+<h2>Add a comment:</h2>
+<%= render 'comments/form' %>
+
+<%= link_to 'Edit', edit_article_path(@article) %> |
+<%= link_to 'Back', articles_path %>
